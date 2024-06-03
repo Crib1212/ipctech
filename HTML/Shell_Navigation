@@ -96,7 +96,7 @@ div#userpilotContent[key=""]:not(.preview) {
   --sidebar-width: 0px;
   direction: ltr;
   display: block;
-}
+
 
 div#userpilotContent[key=""] * {
   -webkit-transition: none;
@@ -1048,9 +1048,9 @@ iframe#userpilot-resource-centre-frame {
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/wpsA1kZvIz5_aVkvXuKN5Q" title="Linux navigation" target="_blank">Linux navigation</a></li>
-<li><a href="/rltoken/q1dtRMnA99cyFF4ALjoX_w" title="Linux - looking around" target="_blank">Linux - looking around</a></li>
-<li><a href="/rltoken/t97eLJ6U-HwjZTe4QfxKdw" title="Linux - manipulating files" target="_blank">Linux - manipulating files</a></li>
+<li><a href="http://linuxcommand.org/lc3_lts0020.php" title="Linux navigation" target="_blank">Linux navigation</a></li>
+<li><a href="http://linuxcommand.org/lc3_lts0030.php" title="Linux - looking around" target="_blank">Linux - looking around</a></li>
+<li><a href="http://linuxcommand.org/lc3_lts0050.php" title="Linux - manipulating files" target="_blank">Linux - manipulating files</a></li>
 </ul>
 
 <p><strong>Or in your terminal:</strong></p>
