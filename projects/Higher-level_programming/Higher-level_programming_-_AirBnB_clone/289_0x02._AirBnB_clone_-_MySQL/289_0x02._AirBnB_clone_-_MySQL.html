@@ -1,0 +1,1941 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script type="text/javascript" async="" src="https://cdn.mxpnl.com/libs/mixpanel-js-wrapper.js"></script><script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-3897705.js?sv=7"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-BLGQHYCV6F&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-N4C8MF2"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":166531,"visitorType":"student","batch":{"id":108,"fullNameWithC":"LOS-0623 (C#17)","schoolLocation":{"id":3,"name":"Lagos"}},"curriculum":{"id":1,"name":"SE Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Project: 0x02. AirBnB clone - MySQL | Lagos Intranet</title>
+
+      <link rel="stylesheet" href="https://use.typekit.net/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="styles.css">
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="script.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="iheIFnQKhR6NUfqx9WGkR7r-I99xbNeUpLtcmqY3FH0r8KQkV5NgmcY9c2_bOPrAKiTxPmM4lxFI1JI7ToJjtg">
+
+      <link rel="apple-touch-icon" href="/apple-touch-icon_alx.png">
+[O
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="/packs/js/application-0fd4dae200b4610beac7.js"></script>
+      <link rel="stylesheet" media="screen" href="/packs/css/application-87456da7.css">
+  <script async="" src="https://script.hotjar.com/modules.e4b2dc39f985f11fb1e4.js" charset="utf-8"></script><script src="https://js.userpilot.io/sdk/version/1.499/app.js" async=""></script><style nonce="undefined">
+iframe#userpilot-nps {
+  width: 900px;
+  right: 0px;
+  margin: 0px auto;
+  opacity: 1 !important;
+}
+
+/* NPS Mobile */
+@media (max-width: 900px) {
+  iframe#userpilot-nps {
+      width: 100%;
+  }
+}
+
+iframe#userpilot-resource-centre-frame {
+  width: 0px;
+  height: 0px;
+}
+
+div#userpilotContent[key=""]:not(.preview) {
+  position: absolute;
+  line-height: 18px;
+  -webkit-transition: none;
+  transition: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483638;
+  pointer-events: none;
+  outline: none !important;
+  background: none !important;
+  --sidebar-width: 0px;
+  direction: ltr;
+  display: block;
+}
+
+div#userpilotContent[key=""] * {
+  -webkit-transition: none;
+  transition: none;
+  direction: ltr;
+}
+
+#userpilotContent[key=""] .conv-cont, #userpilotContent[key=""] .conv-backdrop-cont {
+  z-index: 999999999;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  transition: opacity 0.1s, z-index 0s, visibility 0s;
+}
+
+#userpilotContent[key=""] .conv-cont, #userpilotContent[key=""] .conv-backdrop-cont {
+  z-index: 999999999;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  transition: opacity 0.1s, z-index 0s, visibility 0s;
+}
+
+#userpilotContent[key=""] .userpilot .conv-cont {
+  z-index: 2147483000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+#userpilotContent[key=""] .conv-cont {
+  background: none;
+}
+
+#userpilotContent[key=""] .canv {
+  position: absolute;
+  top: 0;
+  box-shadow: inset 0 0 0 0px #ffffff, inset 0 0 15px rgb(208, 208, 208);
+  background: none !important;
+  display: flex;
+  border: 10000px solid rgba(255, 255, 255, .56);
+  margin-left: -10000px;
+  margin-top: -10000px;
+  padding: 150px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  border-radius: 10006px
+}
+
+#userpilotContent[key=""] .userpilot .canv {
+  position: fixed;
+  top: 0;
+  background: none;
+  display: flex;
+  border: 10000px solid rgba(255, 255, 255, .7);
+  margin-left: -10000px;
+  margin-top: -10000px;
+  padding: 150px;
+  opacity: 0;
+  border-radius: 10006px
+}
+
+#userpilotContent[key=""] .canv.userpilot-canv-hidden {
+  opacity: 0 !important
+}
+
+#userpilotContent[key=""] .userpilot-soft-focus .canv {
+  border: none
+}
+
+#userpilotContent[key=""] .conv-cont[userpilot-hidden] .up-userpilot-mmx-part{
+  pointer-events: none !important;
+}
+
+#userpilotContent[key=""] .up-userpilot-mmx-part {
+  position: absolute;
+  z-index: 1 !important;
+  background: none;
+}
+
+#userpilotContent[key=""] [up-backdrop="0"] {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#userpilotContent[key=""] .conv-cont[backdrop-overlay="1"] .up-userpilot-mmx-part {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0px !important;
+  left: 0px !important;
+}
+
+#userpilotContent[key=""] .conv-cont.allow-scroll .up-userpilot-mmx-part {
+  pointer-events: none;
+}
+
+div#userpilotContent[key=""]>*, div#userpilotContent[key=""]>*:not(.userpilot-hotspot-container)>*:not(.userpilot-backdrop) {
+  pointer-events: all;
+}
+
+#userpilotContent[key=""] .userpilot-mmx-cursor {
+  position: fixed;
+  width: 14px;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  pointer-events: none
+}
+#userpilotContent[key=""] .userpilot-mmx-cursor * {
+  pointer-events: none !important;
+}
+#userpilotContent[key=""] .up-t-pluse {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 100%;
+  color: gainsboro;
+  background: gainsboro
+}
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse {
+  width: 10px;
+  height: 10px;
+  pointer-events: none !important;
+}
+#userpilotContent[key=""] .up-t-pluse:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: -3px;
+  top: -3px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 7px solid;
+  border-color: inherit;
+  -webkit-animation: userpilotActive 2s infinite linear;
+  animation: userpilotActive 2s infinite linear
+}
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse:before {
+  height: 18px;
+  width: 18px;
+  left: -4px;
+  top: -4px;
+  border: 0px;
+  background: inherit;
+  -webkit-animation: userpilot-tooltip-pulse 2s infinite linear;
+  animation: userpilot-tooltip-pulse 2s infinite linear
+}
+@keyframes userpilotActive {
+  0% {
+    -webkit-transform: scale(.1);
+    border-color: inherit;
+    opacity: 1
+  }
+
+  30% {
+    -webkit-transform: scale(1);
+    border: 5px solid;
+    border-color: inherit;
+    opacity: 1
+  }
+
+  40% {
+    -webkit-transform: scale(1.3);
+    border: 0 solid;
+    border-color: inherit
+  }
+
+  100% {
+    border: 0 solid;
+    border-color: inherit
+  }
+}
+
+@-webkit-keyframes active {
+  0% {
+    -webkit-transform: scale(.1);
+    border-color: inherit;
+    opacity: 1
+  }
+
+  30% {
+    -webkit-transform: scale(1);
+    border: 5px solid;
+    border-color: inherit;
+    opacity: 1
+  }
+
+  40% {
+    -webkit-transform: scale(1.3);
+    border: 0 solid;
+    border-color: inherit
+  }
+
+  100% {
+    border: 0 solid;
+    border-color: inherit
+  }
+}
+
+#userpilotContent[key=""] .userpilot-ripple {
+  position: absolute;
+  pointer-events: none;
+  width: 0px;
+  height: 30px;
+  border: none;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+}
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple {
+  height: 18px;
+  width: 18px;
+  background-color: transparent !important;
+}
+#userpilotContent[key=""] .userpilot-ripple:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 0px;
+  top: 0px;
+  background-color: transparent;
+  border-radius: 50%;
+  background: inherit;
+  -webkit-animation: userpilotActive 2s infinite linear;
+  animation: userpilotActive 2s infinite linear;
+  border: 10px solid;
+  border-color: inherit;
+  box-sizing: border-box;
+}
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple:before {
+  height: 18px;
+  width: 18px;
+  left: -1px;
+  top: -1px;
+  -webkit-animation: userpilot-tooltip-pulse 2s infinite linear;
+  animation: userpilot-tooltip-pulse 2s infinite linear;
+}
+@-webkit-keyframes userpilot-tooltip-pulse {
+  0%,
+  100% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+}
+
+@keyframes userpilot-tooltip-pulse {
+  0%,
+  100% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+}
+
+#userpilotContent[key=""] .userpilot-ripple:after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 10px;
+  top: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  background: inherit;
+  -webkit-animation: userpilot_active_after 2s infinite linear;
+  animation: userpilot_active_after 2s infinite linear;
+  box-sizing: border-box;
+  background: currentColor;
+}
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple:after {
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  top: 4px;
+  animation: none;
+}
+@keyframes userpilot_active_after {
+  0% {
+    -webkit-transform: scale(.1);
+    opacity: 1
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: scale(1)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(5)
+  }
+}
+
+@keyframes userpilotActive {
+  0% {
+    -webkit-transform: scale(.1);
+    opacity: 1;
+    border-color: inherit;
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+    border-color: inherit;
+  }
+
+  30% {
+    background: none;
+    border: 0 solid;
+    border-color: inherit;
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    border-color: inherit;
+  }
+}
+
+
+/* sonar animations */
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="sonar"], 
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="sonar"] {
+  background: none !important;
+  animation: none;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="sonar"]::after, 
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="sonar"]::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  border-radius: 150px;
+  animation: pulse-dot infinite 1.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: currentColor;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="sonar"]::before,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="sonar"]::before {
+  left: 0px;
+  top: 0px;
+  animation: pulse-ring infinite 1.5s;
+  border-style: solid;
+  border-width: 4px;
+  padding: 5px;
+  background: none !important;
+}
+
+/* morph animation */
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="morph"],
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="morph"] {
+  background: none !important;
+  animation: none;
+  height: 18px;
+  width: 18px;
+  left: -4px;
+  top: -4px;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="morph"]::before,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="morph"]::before {
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  opacity: .6;
+  position: absolute;
+  border-radius: 50%;
+  animation: morph 1s linear infinite;
+  box-shadow: 0 0 5px 1px currentColor;
+  border: 9px solid;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="morph"]::after,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="morph"]::after {
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  content: "";
+  display: block;
+}
+
+/* target animation */
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="target"],
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="target"]{
+  height: 18px;
+  width: 18px;
+  box-shadow: 0 0 4px 2px currentColor;
+  opacity: 1;
+  animation: target 2s linear infinite;
+  background: currentColor !important;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="target"]::before,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="target"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: currentColor transparent transparent transparent;
+  opacity: .6;
+  background: none;
+  animation: none;
+  border-radius: 0;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="target"]::after,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="target"]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 10px 10px;
+  border-color: transparent transparent currentColor transparent;
+  opacity: .6;
+  top: initial;
+  left: initial;
+  border-radius: initial;
+  background: none;
+}
+
+ /* egg animations */
+ #userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="egg"],
+ #userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="egg"]{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0 0 6px 4px currentColor;
+  animation: egg 600ms linear infinite;
+  animation-direction: alternate;
+  background: none !important;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="egg"]::before,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="egg"]::before {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  background: transparent;
+  border: 1px solid currentColor;
+  animation: none;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="egg"]::after,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="egg"]::after {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  background: currentColor;
+  opacity: .6;
+}
+
+
+@keyframes userpilotActive {
+  0% {
+    -webkit-transform: scale(.1);
+    border-color: inherit;
+    opacity: 1
+  }
+
+  30% {
+    -webkit-transform: scale(1);
+    border: 5px solid;
+    border-color: inherit;
+    opacity: 1
+  }
+
+  40% {
+    -webkit-transform: scale(1.3);
+    border: 0 solid;
+    border-color: inherit
+  }
+
+  100% {
+    border: 0 solid;
+    border-color: inherit
+  }
+}
+
+@-webkit-keyframes active {
+  0% {
+    -webkit-transform: scale(.1);
+    border-color: inherit;
+    opacity: 1
+  }
+
+  30% {
+    -webkit-transform: scale(1);
+    border: 5px solid;
+    border-color: inherit;
+    opacity: 1
+  }
+
+  40% {
+    -webkit-transform: scale(1.3);
+    border: 0 solid;
+    border-color: inherit
+  }
+
+  100% {
+    border: 0 solid;
+    border-color: inherit
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(1, 1) translate(-50%, -50%);
+  }
+
+  30% {
+    transform: scale(1.25, 1.25) translate(-40%, -40%);
+  }
+
+  100% {
+    transform: scale(1, 1) translate(-50%, -50%);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: .5;
+  }
+
+  100% {
+    transform: scale(1.8, 1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes morph {
+  0% {
+    transform: rotateZ(0);
+    border-radius: 20%;
+  }
+
+  50% {
+    transform: rotateZ(45deg);
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: rotateZ(90deg);
+    border-radius: 20%;
+  }
+}
+
+@keyframes target {
+  0% {
+    transform: rotateZ(0) scale(0.6);
+  }
+
+  50% {
+    transform: rotateZ(180deg) scale(1);
+  }
+
+  100% {
+    transform: rotateZ(360deg) scale(0.6);
+  }
+}
+
+@keyframes egg {
+  from {
+    box-shadow: inset 0 0 8px 3px currentColor;
+  }
+
+  to {
+    box-shadow: inset 0 0 4px 1px currentColor;
+  }
+}</style><style nonce="undefined">
+iframe#userpilotIframeContainer,
+iframe#userpilotContentNativeIframe,
+iframe#userpilot-nps,
+iframe#userpilot-resource-centre-frame,
+iframe#userpilot-checklist,
+iframe#userpilotSurveys {
+  max-height: none;
+  max-width: none;
+  min-height: 0px;
+  min-width: 0px;
+  filter: none;
+  pointer-events: initial;
+}
+
+iframe#userpilotIframeContainer,
+iframe#userpilotContentNativeIframe,
+iframe#userpilot-resource-centre-frame,
+iframe#userpilot-checklist,
+iframe#userpilotSurveys {
+  right: initial;
+  left: initial;
+}
+
+iframe#userpilotIframeContainer,
+iframe#userpilotContentNativeIframe,
+iframe#userpilot-resource-centre-frame {
+    display: initial;
+}
+</style></head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="Home"><a href="/"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home "></i></div><div class="visible-xs">Home</div></a></li>
+
+
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="My Planning"><a href="/planning/me"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="Projects"><a href="/projects/current"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="QA Reviews I can make"><a href="/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Evaluation quizzes"><a href="/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Curriculums"><a href="/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="Concepts"><a href="/concepts"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="Conference rooms"><a href="/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Servers"><a href="/servers"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="Sandboxes"><a href="/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Tools"><a href="/dashboards/my_tools"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench "></i></div><div class="visible-xs">Tools</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Video on demand"><a href="/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="Peers"><a href="/users/peers"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      
+
+
+<hr class="visible-xs">
+
+<li>
+      <div data-container="body" data-placement="right" data-toggle="tooltip" title="Discord">
+        <a rel="noreferrer" target="_blank" href="https://discord.com/app">
+          <div class="icon discord">
+            <i aria-hidden="true" class="fa-brands fa-discord "></i>
+          </div>
+          <div class="visible-xs">Discord</div>
+</a>      </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="My Profile">
+    <a href="/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOS9JQkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0c0b15f1ba916670b60f3ee33af87a994216c9b5/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJU2xCSEJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--79c6c3737da777342e6deaaed60c4d4faa41e9f8/IMG_3697.JPG')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Home"><a href="/"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home "></i></div><div class="visible-xs">Home</div></a></li>
+
+
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="My Planning"><a href="/planning/me"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="Projects"><a href="/projects/current"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="QA Reviews I can make"><a href="/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Evaluation quizzes"><a href="/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Curriculums"><a href="/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="Concepts"><a href="/concepts"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="Conference rooms"><a href="/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Servers"><a href="/servers"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="Sandboxes"><a href="/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Tools"><a href="/dashboards/my_tools"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench "></i></div><div class="visible-xs">Tools</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="Video on demand"><a href="/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="Peers"><a href="/users/peers"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      
+
+
+<hr class="visible-xs">
+
+<li>
+      <div data-container="body" data-placement="right" data-toggle="tooltip" title="Discord">
+        <a rel="noreferrer" target="_blank" href="https://discord.com/app">
+          <div class="icon discord">
+            <i aria-hidden="true" class="fa-brands fa-discord "></i>
+          </div>
+          <div class="visible-xs">Discord</div>
+</a>      </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="My Profile">
+    <a href="/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOS9JQkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0c0b15f1ba916670b60f3ee33af87a994216c9b5/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJU2xCSEJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--79c6c3737da777342e6deaaed60c4d4faa41e9f8/IMG_3697.JPG')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        
+
+        <div id="layout-bars">
+          
+          <div class="px-5 py-3" id="student-switch-curriculum">
+  <div class="dropdown d-flex flex-column gap-1">
+    <span class="fs-small text-muted">Curriculum</span>
+
+    <div aria-haspopup="true" aria-expanded="false" class="align-items-center d-flex gap-3" data-toggle="dropdown" id="student-switch-curriculum-dropdown" role="button">
+      <div class="d-flex flex-column" style="line-height: 16px">
+        <span class="fs-4 fw-600">
+          SE Foundations
+        </span>
+        <span class="fs-small text-muted">
+          Average: <span class="fw-500">114.12%</span>
+        </span>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center">
+        <span style="margin-bottom: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-up  fa-fw"></i>
+        </span>
+        <span style="margin-top: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-down  fa-fw"></i>
+        </span>
+      </div>
+    </div>
+
+    <ul aria-labelledby="student-switch-curriculum-dropdown" class="dropdown-menu fs-5">
+        <li>
+          <a href="/curriculums/17/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500">
+                  Short Specializations
+                </span>
+                <span class="text-muted">
+                  Average: <span class="fw-500">110.06%</span>
+                </span>
+              </div>
+
+            </div>
+</a>        </li>
+        <li>
+          <a href="/curriculums/1/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500">
+                  SE Foundations
+                </span>
+                <span class="text-muted">
+                  Average: <span class="fw-500">114.12%</span>
+                </span>
+              </div>
+
+                <span class="fw-600 text-info" style="margin-left: 42px">
+                  <i aria-hidden="true" class="fa-solid fa-check "></i>
+                </span>
+            </div>
+</a>        </li>
+    </ul>
+  </div>
+</div>
+
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+  <div class="d-flex flex-wrap">
+
+    <div class="flex-grow-1" id="curriculum_navigation_content">
+      
+<div class="project row">
+  <div class="col-xs-12 col-lg-10 contains-images">
+
+      <h1 class="gap">
+    0x02. AirBnB clone - MySQL
+    
+  </h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:16,&quot;value&quot;:&quot;Group project&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:19,&quot;value&quot;:&quot;Python&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:27,&quot;value&quot;:&quot;OOP&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:35,&quot;value&quot;:&quot;Back-end&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:37,&quot;value&quot;:&quot;SQL&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:38,&quot;value&quot;:&quot;MySQL&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:40,&quot;value&quot;:&quot;ORM&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:41,&quot;value&quot;:&quot;SQLAlchemy&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;weight&quot;:2,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2024-01-12T06:00:00.000+01:00&quot;,&quot;ends_at&quot;:&quot;2024-01-18T06:00:00.000+01:00&quot;,&quot;second_deadline_at&quot;:&quot;2024-01-21T06:00:00.000+01:00&quot;},&quot;team&quot;:{&quot;in_team_of&quot;:2,&quot;members&quot;:[&quot;Faith Amuda&quot;,&quot;Patrick Igwe&quot;]}}}" data-react-cache-id="projects/ProjectMetadata-0"></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          171.0/191 mandatory
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>89.53%</strong>
+        <ul>
+          <li>Mandatory: 89.53%</li>
+            <li>Optional: no optional tasks</li>
+        </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+    
+
+
+    <div id="project_id" style="display: none" data-project-id="289"></div>
+
+
+
+      
+
+      
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <h2>Background Context</h2>
+
+<p>Environment variables will be your best friend for this project!</p>
+
+<ul>
+<li><code>HBNB_ENV</code>: running environment. It can be “dev” or “test” for the moment (“production” soon!)</li>
+<li><code>HBNB_MYSQL_USER</code>: the username of your MySQL</li>
+<li><code>HBNB_MYSQL_PWD</code>: the password of your MySQL</li>
+<li><code>HBNB_MYSQL_HOST</code>: the hostname of your MySQL</li>
+<li><code>HBNB_MYSQL_DB</code>: the database name of your MySQL</li>
+<li><code>HBNB_TYPE_STORAGE</code>: the type of storage used. It can be “file” (using <code>FileStorage</code>) or <code>db</code> (using <code>DBStorage</code>)</li>
+</ul>
+
+<h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><a href="/rltoken/OG2OW5Pbjs-ds3ZHT0ow4g" title="cmd module" target="_blank">cmd module</a> </li>
+<li><strong>packages</strong> concept page</li>
+<li><a href="/rltoken/g0tzN6ea1hWCj5OF99HB9w" title="unittest module" target="_blank">unittest module</a> </li>
+<li><a href="/rltoken/F6YRBSrkkkTTMVc66iaMgA" title="args/kwargs" target="_blank">args/kwargs</a> </li>
+<li><a href="/rltoken/GYWCmxokUZKAr-T93iQPcQ" title="SQLAlchemy tutorial" target="_blank">SQLAlchemy tutorial</a> </li>
+<li><a href="/rltoken/m4ogDCoKVm3Us0FybYh1tA" title="How To Create a New User and Grant Permissions in MySQL" target="_blank">How To Create a New User and Grant Permissions in MySQL</a> </li>
+<li><a href="/rltoken/FJCSaX1TCf0HAOzhsH_eWA" title="Python3 and environment variables" target="_blank">Python3 and environment variables</a> </li>
+<li><a href="/rltoken/bWxESLJVYGNonjOYg8fOVg" title="SQLAlchemy" target="_blank">SQLAlchemy</a> </li>
+<li><a href="/rltoken/n6ePnCDwnbQMbxGgeoe1VA" title="MySQL 8.0 SQL Statement Syntax" target="_blank">MySQL 8.0 SQL Statement Syntax</a> </li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="/rltoken/3nWKduPHOPRUFGNEtT-SMw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>What is Unit testing and how to implement it in a large project</li>
+<li>What is <code>*args</code> and how to use it</li>
+<li>What is <code>**kwargs</code> and how to use it</li>
+<li>How to handle named arguments in a function</li>
+<li>How to create a MySQL database</li>
+<li>How to create a MySQL user and grant it privileges</li>
+<li>What ORM means</li>
+<li>How to map a Python Class to a MySQL table</li>
+<li>How to handle 2 different storage engines with the same codebase</li>
+<li>How to use environment variables</li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>Python Scripts</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)</li>
+<li>All your files should end with a new line</li>
+<li>The first line of all your files should be exactly <code>#!/usr/bin/python3</code></li>
+<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
+<li>Your code should use the pycodestyle (version <code>2.8.*</code>)</li>
+<li>All your files must be executable</li>
+<li>The length of your files will be tested using <code>wc</code></li>
+<li>All your modules should have documentation (<code>python3 -c 'print(__import__("my_module").__doc__)'</code>)</li>
+<li>All your classes should have documentation (<code>python3 -c 'print(__import__("my_module").MyClass.__doc__)'</code>)</li>
+<li>All your functions (inside and outside a class) should have documentation (<code>python3 -c 'print(__import__("my_module").my_function.__doc__)'</code> and <code>python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'</code>)</li>
+<li>A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)</li>
+</ul>
+
+<h3>Python Unit Tests</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files should end with a new line</li>
+<li>All your test files should be inside a folder <code>tests</code></li>
+<li>You have to use the <a href="/rltoken/g0tzN6ea1hWCj5OF99HB9w" title="unittest module" target="_blank">unittest module</a> </li>
+<li>All your test files should be python files (extension: <code>.py</code>)</li>
+<li>All your test files and folders should start by <code>test_</code></li>
+<li>Your file organization in the tests folder should be the same as your project: ex: for <code>models/base_model.py</code>, unit tests must be in: <code>tests/test_models/test_base_model.py</code></li>
+<li>All your tests should be executed by using this command: <code>python3 -m unittest discover tests</code></li>
+<li>You can also test file by file by using this command: <code>python3 -m unittest tests/test_models/test_base_model.py</code></li>
+<li>All your modules should have documentation (<code>python3 -c 'print(__import__("my_module").__doc__)'</code>)</li>
+<li>All your classes should have documentation (<code>python3 -c 'print(__import__("my_module").MyClass.__doc__)'</code>)</li>
+<li>All your functions (inside and outside a class) should have documentation (<code>python3 -c 'print(__import__("my_module").my_function.__doc__)'</code> and <code>python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'</code>)</li>
+<li>We strongly encourage you to work together on test cases, so that you don’t miss any edge cases</li>
+</ul>
+
+<h3>SQL Scripts</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be executed on Ubuntu 20.04 LTS using <code>MySQL 8.0</code></li>
+<li>Your files will be executed with <code>SQLAlchemy</code> version <code>1.4.x</code></li>
+<li>All your files should end with a new line</li>
+<li>All your SQL queries should have a comment just before (i.e. syntax above)</li>
+<li>All your files should start by a comment describing the task</li>
+<li>All SQL keywords should be in uppercase (<code>SELECT</code>, <code>WHERE</code>…)</li>
+<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
+<li>The length of your files will be tested using <code>wc</code></li>
+</ul>
+
+<h3>GitHub</h3>
+
+<p><strong>There should be one project repository per group. If you clone/fork/whatever a partner’s project repository with the same name before the second deadline, you risk a 0% score.</strong></p>
+
+<h2>More Info</h2>
+
+<p><img src="https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step2.png" alt="" loading="lazy" style=""></p>
+
+<h3>Comments for your SQL file:</h3>
+
+<pre><code>$ cat my_script.sql
+-- first 3 students in the Batch ID=3
+-- because Batch 3 is the best!
+SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
+$
+</code></pre>
+
+  </div>
+</div>
+
+
+        <div data-react-class="videos/PlayerLibrary" data-react-props="{&quot;canManageVideos&quot;:false,&quot;videos&quot;:[{&quot;description&quot;:&quot;\u003cp\u003eHow in the AirBnB clone project storage is managed: File and Database\u003c/p\u003e\n&quot;,&quot;id&quot;:41,&quot;poster&quot;:&quot;https://hbtn-vod-input-prod.s3-accelerate.amazonaws.com/ALX/b24d6365d9d5dcecfa1e2a854ccdb533d8e5ba4bb10db0bb6c192993f53b6cfd/b24d6365d9d5dcecfa1e2a854ccdb533d8e5ba4bb10db0bb6c192993f53b6cfd.jpg?response-content-disposition=attachment%3B\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240701%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20240701T163127Z\u0026X-Amz-Expires=14400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=6a49c7a2f0d3891587a691145b8fc0f1d6fb5af16105dcacf6b08db3bc8e205c&quot;,&quot;shortDescription&quot;:&quot;How in the AirBnB clone project storage is managed&quot;,&quot;source&quot;:&quot;/video_releases/41.m3u8&quot;,&quot;title&quot;:&quot;HBNB - storage abstraction&quot;},{&quot;description&quot;:&quot;\u003cp\u003eOverview of the Console part of the project AirBnB Clone\u003c/p\u003e\n&quot;,&quot;id&quot;:42,&quot;poster&quot;:&quot;https://hbtn-vod-input-prod.s3-accelerate.amazonaws.com/ALX/dbc98d53deb06a48d5345f52d38fe266ada1b706e333fde0412e6f7f86884f8d/dbc98d53deb06a48d5345f52d38fe266ada1b706e333fde0412e6f7f86884f8d.jpg?response-content-disposition=attachment%3B\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240701%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20240701T163127Z\u0026X-Amz-Expires=14400\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=4786bb8bb6aa3608f49913a98f7ed71adacad7ef9b5e9b4586fdd0e2cf491cdc&quot;,&quot;shortDescription&quot;:&quot;Overview of the Console part of the project AirBnB Clone&quot;,&quot;source&quot;:&quot;/video_releases/42.m3u8&quot;,&quot;title&quot;:&quot;AirBnB console&quot;}]}" data-react-cache-id="videos/PlayerLibrary-0"></div>
+
+
+      
+
+        
+          <h2 class="gap">Tasks</h2>
+
+    <div data-role="task1606" data-position="1" id="task-num-0">
+      <div class="panel panel-default task-card " id="task-1606">
+  <span id="user_id" data-id="166531"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Fork me if you can!
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="166531"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1606" data-correction-id="21409800">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>In the industry, you will work on an existing codebase 90% of the time. Your first thoughts upon looking at it might include:</p>
+
+<ul>
+<li>“Who did this code?”</li>
+<li>“How it works?”</li>
+<li>“Where are unittests?”</li>
+<li>“Where is this?”</li>
+<li>“Why did they do that like this?”</li>
+<li>“I don’t understand anything.”</li>
+<li>“… I will refactor everything…”</li>
+</ul>
+
+<p>But the worst thing you could possibly do is to  <strong>redo everything</strong>. Please don’t do that!
+<strong>Note: the existing codebase might be perfect, or it might have errors. Don’t always trust the existing codebase!</strong></p>
+
+<p>For this project you will fork this <a href="https://github.com/justinmajetich/AirBnB_clone.git" title="codebase" target="_blank">codebase</a>:</p>
+
+<ul>
+<li>update the repository name to <code>AirBnB_clone_v2</code></li>
+<li>update the <code>README.md</code> with your information <strong>but don’t delete the initial authors</strong></li>
+</ul>
+
+<p>If you are the owner of this repository, please create a new repository named <code>AirBnB_clone_v2</code> with the same content of <code>AirBnB_clone</code></p>
+
+  </div>
+
+  <div class="list-group">
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>AirBnB_clone_v2</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+    <button class="student_task_done btn btn-default btn-sm yes" data-task-id="1606">
+      <span class="no"><i aria-hidden="true" class="fa-regular fa-square "></i></span>
+      <span class="yes"><i aria-hidden="true" class="fa-regular fa-square-check "></i></span>
+      <span class="pending"><i aria-hidden="true" class="fa-solid fa-spinner  fa-spin-pulse"></i></span>
+      Done<span class="no pending">?</span><span class="yes">!</span>
+    </button>
+
+      <button class="btn btn-default btn-sm check-your-task-1606-modal-button" data-task-id="1606" data-toggle="modal" data-target="#task-test-correction-1606-correction-modal" id="task-num-0-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1606}">
+          Check your code
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1606-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "0. Fork me if you can!"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1606">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1606">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1606">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1606}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1606" data-toggle="modal" data-target="#task-qa-review-1606-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1606}">
+        QA Review
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1606-modal" data-correction-id="21409800" data-task-id="1606">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">0. Fork me if you can!</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task2409" data-position="2" id="task-num-1">
+      <div class="panel panel-default task-card " id="task-2409">
+  <span id="user_id" data-id="166531"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      1. Bug free!
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="166531"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="2409" data-correction-id="21409800">
+        <div class="task_progress_bar" style="width: 44.44%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">44.44%</span> (<span class="task_progress_value">Checks completed: 44.44%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Do you remember the <code>unittest</code> module?</p>
+
+<p>This codebase contains many test cases. Some are missing, but the ones included cover the basic functionality of the program.</p>
+
+<pre><code>guillaume@ubuntu:~/AirBnB_v2$ python3 -m unittest discover tests 2&gt;&amp;1 /dev/null | tail -n 1
+OK
+guillaume@ubuntu:~/AirBnB_v2$ 
+</code></pre>
+
+<p>All your unittests <strong>must</strong> pass without any errors at anytime in this project, <strong>with each storage engine!</strong>. Same for PEP8!</p>
+
+<pre><code>guillaume@ubuntu:~/AirBnB_v2$ HBNB_ENV=test HBNB_MYSQL_USER=hbnb_test HBNB_MYSQL_PWD=hbnb_test_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_test_db HBNB_TYPE_STORAGE=db python3 -m unittest discover tests 2&gt;&amp;1 /dev/null | tail -n 1
+OK
+guillaume@ubuntu:~/AirBnB_v2$ 
+</code></pre>
+
+<p>Some tests won’t be relevant for some type of storage, please skip them by using the <code>skipIf</code> feature of <a href="/rltoken/Gx_1dJOPPeAyeM6NaXDmjg" title="the Unittest module - 26.3.6. Skipping tests and expected failures" target="_blank">the Unittest module - 26.3.6. Skipping tests and expected failures</a>. Of course, the number of tests must be higher than the current number of tests, so if you decide to skip a test, you should write a new test!</p>
+
+<h3>How to test with MySQL?</h3>
+
+<p>First, you create a specific database for it (next tasks). After, you have to remember what the purpose of an unittest?</p>
+
+<p><strong>“Assert a current state (objects/data/database), do an action, and validate this action changed (or not) the state of your objects/data/database”</strong></p>
+
+<p>For example, “you want to validate that the <code>create State name="California"</code> command in the console will add a new record in your table <code>states</code> in your database”, here steps for your unittest:</p>
+
+<ul>
+<li>get the number of current records in the table <code>states</code> (my using a <code>MySQLdb</code> for example - but not SQLAlchemy (remember, you want to test if it works, so it’s better to isolate from the system))</li>
+<li>execute the console command</li>
+<li>get (again) the number of current records in the table <code>states</code> (same method, with <code>MySQLdb</code>)</li>
+<li>if the difference is <code>+1</code> =&gt; test passed</li>
+</ul>
+
+  </div>
+
+  <div class="list-group">
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>AirBnB_clone_v2</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+    <button class="student_task_done btn btn-default btn-sm no" data-task-id="2409">
+      <span class="no"><i aria-hidden="true" class="fa-regular fa-square "></i></span>
+      <span class="yes"><i aria-hidden="true" class="fa-regular fa-square-check "></i></span>
+      <span class="pending"><i aria-hidden="true" class="fa-solid fa-spinner  fa-spin-pulse"></i></span>
+      Done<span class="no pending">?</span><span class="yes">!</span>
+    </button>
+
+      <button class="btn btn-default btn-sm check-your-task-2409-modal-button" data-task-id="2409" data-toggle="modal" data-target="#task-test-correction-2409-correction-modal" id="task-num-1-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:2409}">
+          Check your code
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-2409-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "1. Bug free!"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="2409">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="2409">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="2409">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="2409" data-correction-id="21409800">
+        Ask for a new correction
+        <span class="in_progress_info">: in progress...</span>
+        <span class="error_occurred_info">: an error occurred</span>
+      </button>
+
+    
+
+      <button class="btn btn-default btn-sm" data-task-id="2409" data-toggle="modal" data-target="#task-qa-review-2409-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:2409}">
+        QA Review
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-2409-modal" data-correction-id="21409800" data-task-id="2409">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">1. Bug free!</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1608" data-position="3" id="task-num-2">
+      <div class="panel panel-default task-card " id="task-1608">
+  <span id="user_id" data-id="166531"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      2. Console improvements
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="166531"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1608" data-correction-id="21409800">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Update the <code>def do_create(self, arg):</code> function of your command interpreter (<code>console.py</code>) to allow for object creation with given parameters:</p>
+
+<ul>
+<li>Command syntax: <code>create &lt;Class name&gt; &lt;param 1&gt; &lt;param 2&gt; &lt;param 3&gt;...</code></li>
+<li>Param syntax: <code>&lt;key name&gt;=&lt;value&gt;</code></li>
+<li>Value syntax:
+
+<ul>
+<li>String: <code>"&lt;value&gt;"</code> =&gt; starts with a double quote
+
+<ul>
+<li>any double quote inside the value must be escaped with a backslash <code>\</code></li>
+<li>all underscores <code>_</code> must be replace by spaces <code></code>. Example: You want to set the string <code>My little house</code> to the attribute <code>name</code>, your command line must be <code>name="My_little_house"</code></li>
+</ul></li>
+<li>Float: <code>&lt;unit&gt;.&lt;decimal&gt;</code> =&gt; contains a dot <code>.</code></li>
+<li>Integer: <code>&lt;number&gt;</code> =&gt; default case</li>
+</ul></li>
+<li>If any parameter doesn’t fit with these requirements or can’t be recognized correctly by your program, it must be skipped</li>
+</ul>
+
+<p><strong>Don’t forget to add tests for this new feature!</strong></p>
+
+<p>Also, this new feature will be tested here only with <code>FileStorage</code> engine.</p>
+
+<pre><code>guillaume@ubuntu:~/AirBnB_v2$ cat test_params_create
+create State name="California"
+create State name="Arizona"
+all State
+
+create Place city_id="0001" user_id="0001" name="My_little_house" number_rooms=4 number_bathrooms=2 max_guest=10 price_by_night=300 latitude=37.773972 longitude=-122.431297
+all Place
+guillaume@ubuntu:~/AirBnB_v2$ cat test_params_create | ./console.py 
+(hbnb) d80e0344-63eb-434a-b1e0-07783522124e
+(hbnb) 092c9e5d-6cc0-4eec-aab9-3c1d79cfc2d7
+(hbnb) [[State] (d80e0344-63eb-434a-b1e0-07783522124e) {'id': 'd80e0344-63eb-434a-b1e0-07783522124e', 'created_at': datetime.datetime(2017, 11, 10, 4, 41, 7, 842160), 'updated_at': datetime.datetime(2017, 11, 10, 4, 41, 7, 842235), 'name': 'California'}, [State] (092c9e5d-6cc0-4eec-aab9-3c1d79cfc2d7) {'id': '092c9e5d-6cc0-4eec-aab9-3c1d79cfc2d7', 'created_at': datetime.datetime(2017, 11, 10, 4, 41, 7, 842779), 'updated_at': datetime.datetime(2017, 11, 10, 4, 41, 7, 842792), 'name': 'Arizona'}]
+(hbnb) (hbnb) 76b65327-9e94-4632-b688-aaa22ab8a124
+(hbnb) [[Place] (76b65327-9e94-4632-b688-aaa22ab8a124) {'number_bathrooms': 2, 'longitude': -122.431297, 'city_id': '0001', 'user_id': '0001', 'latitude': 37.773972, 'price_by_night': 300, 'name': 'My little house', 'id': '76b65327-9e94-4632-b688-aaa22ab8a124', 'max_guest': 10, 'number_rooms': 4, 'updated_at': datetime.datetime(2017, 11, 10, 4, 41, 7, 843774), 'created_at': datetime.datetime(2017, 11, 10, 4, 41, 7, 843747)}]
+(hbnb)
+guillaume@ubuntu:~/AirBnB_v2$
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>AirBnB_clone_v2</code></li>
+            <li>File: <code>console.py, models/, tests/</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+    <button class="student_task_done btn btn-default btn-sm yes" data-task-id="1608">
+      <span class="no"><i aria-hidden="true" class="fa-regular fa-square "></i></span>
+      <span class="yes"><i aria-hidden="true" class="fa-regular fa-square-check "></i></span>
+      <span class="pending"><i aria-hidden="true" class="fa-solid fa-spinner  fa-spin-pulse"></i></span>
+      Done<span class="no pending">?</span><span class="yes">!</span>
+    </button>
+
+      <button class="btn btn-default btn-sm check-your-task-1608-modal-button" data-task-id="1608" data-toggle="modal" data-target="#task-test-correction-1608-correction-modal" id="task-num-2-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1608}">
+          Check your code
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1608-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "2. Console improvements"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1608">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1608">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1608">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1608}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1608" data-toggle="modal" data-target="#task-qa-review-1608-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1608}">
+        QA Review
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1608-modal" data-correction-id="21409800" data-task-id="1608">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">2. Console improvements</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+    <div data-role="task1609" data-position="4" id="task-num-3">
+      <div class="panel panel-default task-card " id="task-1609">
+  <span id="user_id" data-id="166531"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      3. MySQL setup development
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="166531"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1609" data-correction-id="21409800">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a script that prepares a MySQL server for the project:</p>
+
+<ul>
+<li>A database <code>hbnb_dev_db</code></li>
+<li>A new user <code>hbnb_dev</code> (in <code>localhost</code>)</li>
+<li>The password  of <code>hbnb_dev</code> should be set to <code>hbnb_dev_pwd</code></li>
+<li><code>hbnb_dev</code> should have all privileges on the database <code>hbnb_dev_db</code> (and <strong>only this database</strong>)</li>
+<li><code>hbnb_dev</code> should have <code>SELECT</code> privilege on the database <code>performance_schema</code> (and <strong>only this database</strong>)</li>
+<li>If the database <code>hbnb_dev_db</code> or the user <code>hbnb_dev</code> already exists, your script should not fail</li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/AirBnB_v2$ cat setup_mysql_dev.sql | mysql -hlocalhost -uroot -p
+Enter password: 
+guillaume@ubuntu:~/AirBnB_v2$ echo "SHOW DATABASES;" | mysql -uhbnb_dev -p | grep hbnb_dev_db
+Enter password: 
+hbnb_dev_db
+guillaume@ubuntu:~/AirBnB_v2$ echo "SHOW GRANTS FOR 'hbnb_dev'@'localhost';" | mysql -uroot -p
+Enter password: 
+Grants for hbnb_dev@localhost
+GRANT USAGE ON </code></pre></div></div></div></div></div></div></div></article></main><script type="text/javascript" id="">window.userpilotSettings={token:"NX-b636a33d"};</script>
+<script type="text/javascript" id="" src="https://js.userpilot.io/sdk/latest.js"></script><link rel="stylesheet" href="https://alx-tools.github.io/savanna-content-styles/assets/css/styles.css"><iframe id="_hjSafeContext_51000681" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+<script type="text/javascript" id="">for(var dl=window.dataLayer||[],user=void 0,i=0;i<dl.length;i++)if(dl[i].userId){user=dl[i];break}user&&user.batch&&user.curriculum&&(userpilot.identify("savanna-"+user.userId.toString(),{cohortId:user.batch.id,cohortName:user.batch.fullNameWithC,locationId:user.batch.schoolLocation.id,locationName:user.batch.schoolLocation.name,curriculumId:user.curriculum.id,curriculumName:user.curriculum.name}),userpilot.reload());</script>
+<div id="userpilotContent" key="" theme_id="0"></div></body></html>

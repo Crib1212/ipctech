@@ -1,0 +1,1595 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="https://trinketsofcody.com/cody-widget.js"></script><script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script type="text/javascript" async="" src="https://cdn.mxpnl.com/libs/mixpanel-js-wrapper.js"></script><script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-3897705.js?sv=7"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-BLGQHYCV6F&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-N4C8MF2"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":166531,"visitorType":"student","batch":{"id":108,"fullNameWithC":"LOS-0623 (C#17)","schoolLocation":{"id":3,"name":"Lagos"}},"curriculum":{"id":1,"name":"SE Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+[O        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Project: 0x17. Web stack debugging #3 | Lagos Intranet</title>
+
+      <link rel="stylesheet" href="https://use.typekit.net/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="styles.css">
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="script.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="BC_DRumxOeDFsKdeyl3t46kaI-5nIf5ZbrJnSMpPOVZxSYEeRzjNiyO3vnbXc-OdiuxiF7pYpJeSmRvsbZHRDA">
+
+      <link rel="apple-touch-icon" href="/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="/packs/js/application-0fd4dae200b4610beac7.js"></script>
+      <link rel="stylesheet" media="screen" href="/packs/css/application-87456da7.css">
+  <script async="" src="https://script.hotjar.com/modules.e4b2dc39f985f11fb1e4.js" charset="utf-8"></script><script src="https://js.userpilot.io/sdk/version/1.505/app.js" async=""></script><style nonce="undefined">
+iframe#userpilot-nps {
+  width: 900px;
+  right: 0px;
+  margin: 0px auto;
+  opacity: 1 !important;
+}
+
+/* NPS Mobile */
+@media (max-width: 900px) {
+  iframe#userpilot-nps {
+      width: 100%;
+  }
+}
+
+iframe#userpilot-resource-centre-frame {
+  width: 0px;
+  height: 0px;
+}
+
+div#userpilotContent[key=""]:not(.preview) {
+  position: absolute;
+  line-height: 18px;
+  -webkit-transition: none;
+  transition: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483638;
+  pointer-events: none;
+  outline: none !important;
+  background: none !important;
+  --sidebar-width: 0px;
+  direction: ltr;
+  display: block;
+}
+
+div#userpilotContent[key=""] * {
+  -webkit-transition: none;
+  transition: none;
+  direction: ltr;
+}
+
+#userpilotContent[key=""] .conv-cont, #userpilotContent[key=""] .conv-backdrop-cont {
+  z-index: 999999999;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  transition: opacity 0.1s, z-index 0s, visibility 0s;
+}
+
+#userpilotContent[key=""] .conv-cont, #userpilotContent[key=""] .conv-backdrop-cont {
+  z-index: 999999999;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  transition: opacity 0.1s, z-index 0s, visibility 0s;
+}
+
+#userpilotContent[key=""] .userpilot .conv-cont {
+  z-index: 2147483000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+#userpilotContent[key=""] .conv-cont {
+  background: none;
+}
+
+#userpilotContent[key=""] .canv {
+  position: absolute;
+  top: 0;
+  box-shadow: inset 0 0 0 0px #ffffff, inset 0 0 15px rgb(208, 208, 208);
+  background: none !important;
+  display: flex;
+  border: 10000px solid rgba(255, 255, 255, .56);
+  margin-left: -10000px;
+  margin-top: -10000px;
+  padding: 150px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  border-radius: 10006px
+}
+
+#userpilotContent[key=""] .userpilot .canv {
+  position: fixed;
+  top: 0;
+  background: none;
+  display: flex;
+  border: 10000px solid rgba(255, 255, 255, .7);
+  margin-left: -10000px;
+  margin-top: -10000px;
+  padding: 150px;
+  opacity: 0;
+  border-radius: 10006px
+}
+
+#userpilotContent[key=""] .canv.userpilot-canv-hidden {
+  opacity: 0 !important
+}
+
+#userpilotContent[key=""] .userpilot-soft-focus .canv {
+  border: none
+}
+
+#userpilotContent[key=""] .conv-cont[userpilot-hidden] .up-userpilot-mmx-part{
+  pointer-events: none !important;
+}
+
+#userpilotContent[key=""] .up-userpilot-mmx-part {
+  position: absolute;
+  z-index: 1 !important;
+  background: none;
+}
+
+#userpilotContent[key=""] [up-backdrop="0"] {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#userpilotContent[key=""] .conv-cont[backdrop-overlay="1"] .up-userpilot-mmx-part {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0px !important;
+  left: 0px !important;
+}
+
+#userpilotContent[key=""] .conv-cont.allow-scroll .up-userpilot-mmx-part {
+  pointer-events: none;
+}
+
+div#userpilotContent[key=""]>*, div#userpilotContent[key=""]>*:not(.userpilot-hotspot-container)>*:not(.userpilot-backdrop) {
+  pointer-events: all;
+}
+
+#userpilotContent[key=""] .userpilot-mmx-cursor {
+  position: fixed;
+  width: 14px;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  pointer-events: none
+}
+#userpilotContent[key=""] .userpilot-mmx-cursor * {
+  pointer-events: none !important;
+}
+#userpilotContent[key=""] .up-t-pluse {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 100%;
+  color: gainsboro;
+  background: gainsboro
+}
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse {
+  width: 10px;
+  height: 10px;
+  pointer-events: none !important;
+}
+#userpilotContent[key=""] .up-t-pluse:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: -3px;
+  top: -3px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 7px solid;
+  border-color: inherit;
+  -webkit-animation: userpilotActive 2s infinite linear;
+  animation: userpilotActive 2s infinite linear
+}
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse:before {
+  height: 18px;
+  width: 18px;
+  left: -4px;
+  top: -4px;
+  border: 0px;
+  background: inherit;
+  -webkit-animation: userpilot-tooltip-pulse 2s infinite linear;
+  animation: userpilot-tooltip-pulse 2s infinite linear
+}
+@keyframes userpilotActive {
+  0% {
+    -webkit-transform: scale(.1);
+    border-color: inherit;
+    opacity: 1
+  }
+
+  30% {
+    -webkit-transform: scale(1);
+    border: 5px solid;
+    border-color: inherit;
+    opacity: 1
+  }
+
+  40% {
+    -webkit-transform: scale(1.3);
+    border: 0 solid;
+    border-color: inherit
+  }
+
+  100% {
+    border: 0 solid;
+    border-color: inherit
+  }
+}
+
+@-webkit-keyframes active {
+  0% {
+    -webkit-transform: scale(.1);
+    border-color: inherit;
+    opacity: 1
+  }
+
+  30% {
+    -webkit-transform: scale(1);
+    border: 5px solid;
+    border-color: inherit;
+    opacity: 1
+  }
+
+  40% {
+    -webkit-transform: scale(1.3);
+    border: 0 solid;
+    border-color: inherit
+  }
+
+  100% {
+    border: 0 solid;
+    border-color: inherit
+  }
+}
+
+#userpilotContent[key=""] .userpilot-ripple {
+  position: absolute;
+  pointer-events: none;
+  width: 0px;
+  height: 30px;
+  border: none;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+}
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple {
+  height: 18px;
+  width: 18px;
+  background-color: transparent !important;
+}
+#userpilotContent[key=""] .userpilot-ripple:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 0px;
+  top: 0px;
+  background-color: transparent;
+  border-radius: 50%;
+  background: inherit;
+  -webkit-animation: userpilotActive 2s infinite linear;
+  animation: userpilotActive 2s infinite linear;
+  border: 10px solid;
+  border-color: inherit;
+  box-sizing: border-box;
+}
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple:before {
+  height: 18px;
+  width: 18px;
+  left: -1px;
+  top: -1px;
+  -webkit-animation: userpilot-tooltip-pulse 2s infinite linear;
+  animation: userpilot-tooltip-pulse 2s infinite linear;
+}
+@-webkit-keyframes userpilot-tooltip-pulse {
+  0%,
+  100% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+}
+
+@keyframes userpilot-tooltip-pulse {
+  0%,
+  100% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+}
+
+#userpilotContent[key=""] .userpilot-ripple:after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 10px;
+  top: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  background: inherit;
+  -webkit-animation: userpilot_active_after 2s infinite linear;
+  animation: userpilot_active_after 2s infinite linear;
+  box-sizing: border-box;
+  background: currentColor;
+}
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple:after {
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  top: 4px;
+  animation: none;
+}
+@keyframes userpilot_active_after {
+  0% {
+    -webkit-transform: scale(.1);
+    opacity: 1
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: scale(1)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(5)
+  }
+}
+
+@keyframes userpilotActive {
+  0% {
+    -webkit-transform: scale(.1);
+    opacity: 1;
+    border-color: inherit;
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+    border-color: inherit;
+  }
+
+  30% {
+    background: none;
+    border: 0 solid;
+    border-color: inherit;
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    border-color: inherit;
+  }
+}
+
+
+/* sonar animations */
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="sonar"], 
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="sonar"] {
+  background: none !important;
+  animation: none;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="sonar"]::after, 
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="sonar"]::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  border-radius: 150px;
+  animation: pulse-dot infinite 1.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: currentColor;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="sonar"]::before,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="sonar"]::before {
+  left: 0px;
+  top: 0px;
+  animation: pulse-ring infinite 1.5s;
+  border-style: solid;
+  border-width: 4px;
+  padding: 5px;
+  background: none !important;
+}
+
+/* morph animation */
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="morph"],
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="morph"] {
+  background: none !important;
+  animation: none;
+  height: 18px;
+  width: 18px;
+  left: -4px;
+  top: -4px;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="morph"]::before,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="morph"]::before {
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  opacity: .6;
+  position: absolute;
+  border-radius: 50%;
+  animation: morph 1s linear infinite;
+  box-shadow: 0 0 5px 1px currentColor;
+  border: 9px solid;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="morph"]::after,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="morph"]::after {
+  background: currentColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  content: "";
+  display: block;
+}
+
+/* target animation */
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="target"],
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="target"]{
+  height: 18px;
+  width: 18px;
+  box-shadow: 0 0 4px 2px currentColor;
+  opacity: 1;
+  animation: target 2s linear infinite;
+  background: currentColor !important;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="target"]::before,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="target"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: currentColor transparent transparent transparent;
+  opacity: .6;
+  background: none;
+  animation: none;
+  border-radius: 0;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="target"]::after,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="target"]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 10px 10px;
+  border-color: transparent transparent currentColor transparent;
+  opacity: .6;
+  top: initial;
+  left: initial;
+  border-radius: initial;
+  background: none;
+}
+
+ /* egg animations */
+ #userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="egg"],
+ #userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="egg"]{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0 0 6px 4px currentColor;
+  animation: egg 600ms linear infinite;
+  animation-direction: alternate;
+  background: none !important;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="egg"]::before,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="egg"]::before {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  background: transparent;
+  border: 1px solid currentColor;
+  animation: none;
+}
+
+#userpilotContent[key=""]:not([version="0.1"]) .up-t-pluse[animation="egg"]::after,
+#userpilotContent[key=""]:not([version="0.1"]) .userpilot-ripple[animation="egg"]::after {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  background: currentColor;
+  opacity: .6;
+}
+
+
+@keyframes userpilotActive {
+  0% {
+    -webkit-transform: scale(.1);
+    border-color: inherit;
+    opacity: 1
+  }
+
+  30% {
+    -webkit-transform: scale(1);
+    border: 5px solid;
+    border-color: inherit;
+    opacity: 1
+  }
+
+  40% {
+    -webkit-transform: scale(1.3);
+    border: 0 solid;
+    border-color: inherit
+  }
+
+  100% {
+    border: 0 solid;
+    border-color: inherit
+  }
+}
+
+@-webkit-keyframes active {
+  0% {
+    -webkit-transform: scale(.1);
+    border-color: inherit;
+    opacity: 1
+  }
+
+  30% {
+    -webkit-transform: scale(1);
+    border: 5px solid;
+    border-color: inherit;
+    opacity: 1
+  }
+
+  40% {
+    -webkit-transform: scale(1.3);
+    border: 0 solid;
+    border-color: inherit
+  }
+
+  100% {
+    border: 0 solid;
+    border-color: inherit
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(1, 1) translate(-50%, -50%);
+  }
+
+  30% {
+    transform: scale(1.25, 1.25) translate(-40%, -40%);
+  }
+
+  100% {
+    transform: scale(1, 1) translate(-50%, -50%);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: .5;
+  }
+
+  100% {
+    transform: scale(1.8, 1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes morph {
+  0% {
+    transform: rotateZ(0);
+    border-radius: 20%;
+  }
+
+  50% {
+    transform: rotateZ(45deg);
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: rotateZ(90deg);
+    border-radius: 20%;
+  }
+}
+
+@keyframes target {
+  0% {
+    transform: rotateZ(0) scale(0.6);
+  }
+
+  50% {
+    transform: rotateZ(180deg) scale(1);
+  }
+
+  100% {
+    transform: rotateZ(360deg) scale(0.6);
+  }
+}
+
+@keyframes egg {
+  from {
+    box-shadow: inset 0 0 8px 3px currentColor;
+  }
+
+  to {
+    box-shadow: inset 0 0 4px 1px currentColor;
+  }
+}</style><style nonce="undefined">
+iframe#userpilotIframeContainer,
+iframe#userpilotContentNativeIframe,
+iframe#userpilot-nps,
+iframe#userpilot-resource-centre-frame,
+iframe#userpilot-checklist,
+iframe#userpilotSurveys,
+iframe#userpilot-survey {
+  background: none;
+  max-height: none;
+  max-width: none;
+  min-height: 0px;
+  min-width: 0px;
+  filter: none;
+  pointer-events: initial;
+}
+
+iframe#userpilotIframeContainer,
+iframe#userpilotContentNativeIframe,
+iframe#userpilot-resource-centre-frame,
+iframe#userpilot-checklist,
+iframe#userpilotSurveys,
+iframe#userpilot-survey {
+  right: initial;
+  left: initial;
+}
+
+iframe#userpilotIframeContainer,
+iframe#userpilotContentNativeIframe,
+iframe#userpilot-resource-centre-frame {
+    display: initial;
+}
+</style></head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Home"><a href="/"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home "></i></div><div class="visible-xs">Home</div></a></li>
+
+
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="/planning/me"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="/projects/current"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="/concepts"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="/servers"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Tools"><a href="/dashboards/my_tools"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench "></i></div><div class="visible-xs">Tools</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="/users/peers"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      
+
+
+<hr class="visible-xs">
+
+<li>
+      <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Discord">
+        <a rel="noreferrer" target="_blank" href="https://discord.com/app">
+          <div class="icon discord">
+            <i aria-hidden="true" class="fa-brands fa-discord "></i>
+          </div>
+          <div class="visible-xs">Discord</div>
+</a>      </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOS9JQkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0c0b15f1ba916670b60f3ee33af87a994216c9b5/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJU2xCSEJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--79c6c3737da777342e6deaaed60c4d4faa41e9f8/IMG_3697.JPG')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Home"><a href="/"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home "></i></div><div class="visible-xs">Home</div></a></li>
+
+
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="/planning/me"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="/projects/current"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="/concepts"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="/servers"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Tools"><a href="/dashboards/my_tools"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench "></i></div><div class="visible-xs">Tools</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="/users/peers"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      
+
+
+<hr class="visible-xs">
+
+<li>
+      <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Discord">
+        <a rel="noreferrer" target="_blank" href="https://discord.com/app">
+          <div class="icon discord">
+            <i aria-hidden="true" class="fa-brands fa-discord "></i>
+          </div>
+          <div class="visible-xs">Discord</div>
+</a>      </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://intranet.alxswe.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOS9JQkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0c0b15f1ba916670b60f3ee33af87a994216c9b5/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJU2xCSEJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--79c6c3737da777342e6deaaed60c4d4faa41e9f8/IMG_3697.JPG')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        
+
+        <div id="layout-bars">
+          
+          <div class="px-5 py-3" id="student-switch-curriculum">
+  <div class="dropdown d-flex flex-column gap-1">
+    <span class="fs-small text-muted">Curriculum</span>
+
+    <div aria-haspopup="true" aria-expanded="false" class="align-items-center d-flex gap-3" data-toggle="dropdown" id="student-switch-curriculum-dropdown" role="button">
+      <div class="d-flex flex-column" style="line-height: 16px">
+        <span class="fs-4 fw-600">
+          SE Foundations
+        </span>
+        <span class="fs-small text-muted">
+          Average: <span class="fw-500">114.12%</span>
+        </span>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center">
+        <span style="margin-bottom: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-up  fa-fw"></i>
+        </span>
+        <span style="margin-top: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-down  fa-fw"></i>
+        </span>
+      </div>
+    </div>
+
+    <ul aria-labelledby="student-switch-curriculum-dropdown" class="dropdown-menu fs-5">
+        <li>
+          <a href="/curriculums/17/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500">
+                  Short Specializations
+                </span>
+                <span class="text-muted">
+                  Average: <span class="fw-500">108.91%</span>
+                </span>
+              </div>
+
+            </div>
+</a>        </li>
+        <li>
+          <a href="/curriculums/1/observe">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500">
+                  SE Foundations
+                </span>
+                <span class="text-muted">
+                  Average: <span class="fw-500">114.12%</span>
+                </span>
+              </div>
+
+                <span class="fw-600 text-info" style="margin-left: 42px">
+                  <i aria-hidden="true" class="fa-solid fa-check "></i>
+                </span>
+            </div>
+</a>        </li>
+    </ul>
+  </div>
+</div>
+
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+  <div class="d-flex flex-wrap">
+
+    <div class="flex-grow-1" id="curriculum_navigation_content">
+      
+<div class="project row">
+  <div class="col-xs-12 col-lg-10 contains-images">
+
+      <h1 class="gap">
+    0x17. Web stack debugging #3
+    
+  </h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:6,&quot;value&quot;:&quot;DevOps&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:23,&quot;value&quot;:&quot;SysAdmin&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:28,&quot;value&quot;:&quot;Scripting&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:31,&quot;value&quot;:&quot;Debugging&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">DevOps</span><span class="label label-primary" style="font-size: 14px;">SysAdmin</span><span class="label label-primary" style="font-size: 14px;">Scripting</span><span class="label label-primary" style="font-size: 14px;">Debugging</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2024-03-05T06:00:00.000+01:00&quot;,&quot;ends_at&quot;:&quot;2024-03-07T06:00:00.000+01:00&quot;,&quot;second_deadline_at&quot;:&quot;2024-03-11T06:00:00.000+01:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-gear fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-03-05 06:00 (GMT+01:00)"><span class="datetime">Mar 5, 2024 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2024-03-07 06:00 (GMT+01:00)"><span class="datetime">Mar 7, 2024 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-square-check fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          2.0/2 mandatory
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>100.0%</strong>
+        <ul>
+          <li>Mandatory: 100.0%</li>
+            <li>Optional: no optional tasks</li>
+        </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+    
+
+
+    <div id="project_id" style="display: none" data-project-id="293"></div>
+
+
+
+      
+
+        <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Concepts</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <em>For this project, we expect you to look at these concepts:</em>
+      </p>
+
+      <ul>
+          <li>
+            <a href="/concepts/17">Web Server</a>
+          </li>
+          <li>
+            <a href="/concepts/68">Web stack debugging</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <h2>Background Context</h2>
+
+<p><img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/293/d42WuBh.png" alt="" loading="lazy" style=""></p>
+
+<p>When debugging, sometimes logs are not enough. Either because the software is breaking in a way that was not expected and the error is not being logged, or because logs are not providing enough information. In this case, you will need to go down the stack, the good news is that this is something Holberton students can do :)</p>
+
+<p>Wordpress is a very popular tool, it allows you to run blogs, portfolios, e-commerce and company websites… It <a href="/rltoken/qxyFYZIwOXQWw02-HaQ7Bw" title="actually powers 26% of the web" target="_blank">actually powers 26% of the web</a>, so there is a fair chance that you will end up working with it at some point in your career.</p>
+
+<p>Wordpress is usually run on LAMP (Linux, Apache, MySQL, and PHP), which is a very widely used set of tools. </p>
+
+<p>The web stack you are debugging today is a Wordpress website running on a LAMP stack.</p>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>All your files will be interpreted on Ubuntu 14.04 LTS</li>
+<li>All your files should end with a new line</li>
+<li>A <code>README.md</code> file at the root of the folder of the project is mandatory</li>
+<li>Your Puppet manifests must pass <code>puppet-lint</code> version 2.1.1 without any errors</li>
+<li>Your Puppet manifests must run without error</li>
+<li>Your Puppet manifests first line must be a comment explaining what the Puppet manifest is about</li>
+<li>Your Puppet manifests files must end with the extension <code>.pp</code> </li>
+<li>Files will be checked with Puppet v3.4</li>
+</ul>
+
+<h2>More Info</h2>
+
+<h3>Install <code>puppet-lint</code></h3>
+
+<pre><code>$ apt-get install -y ruby
+$ gem install puppet-lint -v 2.1.1
+</code></pre>
+
+  </div>
+</div>
+
+
+      
+
+      
+
+        
+          <h2 class="gap">Tasks</h2>
+
+    <div data-role="task1616" data-position="1" id="task-num-0">
+      <div class="panel panel-default task-card " id="task-1616">
+  <span id="user_id" data-id="166531"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Strace is your friend
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="166531"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar truncate" data-task-id="1616" data-correction-id="23533822">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p><a href="https://youtu.be/uHEzt1QuASo" target="_blank"><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/6/f5af5167e65bd3101f76.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240709%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20240709T154040Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0a7dee34c57cd5f8d4b5bab9ddca2c2147884a1727f90979d982ef016f5a7ee" alt="" loading="lazy" style=""></a></p>
+
+<p>Using <code>strace</code>, find out why Apache is returning a 500 error. Once you find the issue, fix it and then automate it using Puppet (instead of using Bash as you were previously doing).</p>
+
+<p>Hint:</p>
+
+<ul>
+<li><code>strace</code> can attach to a current running process</li>
+<li>You can use <a href="/rltoken/6GpArtwhw7thSyNub9s3qA" title="tmux" target="_blank">tmux</a> to run <a href="/rltoken/ueMevAif95DjyW2sqVCMoA" title="strace" target="_blank">strace</a> in one window and <code>curl</code> in another one</li>
+</ul>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Your <code>0-strace_is_your_friend.pp</code> file must contain Puppet code</li>
+<li>You can use whatever Puppet resource type you want for you fix</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>root@e514b399d69d:~# curl -sI 127.0.0.1
+HTTP/1.0 500 Internal Server Error
+Date: Fri, 24 Mar 2017 07:32:16 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.21
+Connection: close
+Content-Type: text/html
+
+root@e514b399d69d:~# puppet apply 0-strace_is_your_friend.pp
+Notice: Compiled catalog for e514b399d69d.ec2.internal in environment production in 0.02 seconds
+Notice: /Stage[main]/Main/Exec[fix-wordpress]/returns: executed successfully
+Notice: Finished catalog run in 0.08 seconds
+root@e514b399d69d:~# curl -sI 127.0.0.1:80
+root@e514b399d69d:~#
+HTTP/1.1 200 OK
+Date: Fri, 24 Mar 2017 07:11:52 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.21
+Link: &lt;http://127.0.0.1/?rest_route=/&gt;; rel="https://api.w.org/"
+Content-Type: text/html; charset=UTF-8
+
+root@e514b399d69d:~# curl -s 127.0.0.1:80 | grep Holberton
+&lt;title&gt;Holberton &amp;#8211; Just another WordPress site&lt;/title&gt;
+&lt;link rel="alternate" type="application/rss+xml" title="Holberton &amp;raquo; Feed" href="http://127.0.0.1/?feed=rss2" /&gt;
+&lt;link rel="alternate" type="application/rss+xml" title="Holberton &amp;raquo; Comments Feed" href="http://127.0.0.1/?feed=comments-rss2" /&gt;
+        &lt;div id="wp-custom-header" class="wp-custom-header"&gt;&lt;img src="http://127.0.0.1/wp-content/themes/twentyseventeen/assets/images/header.jpg" width="2000" height="1200" alt="Holberton" /&gt;&lt;/div&gt;  &lt;/div&gt;
+                            &lt;h1 class="site-title"&gt;&lt;a href="http://127.0.0.1/" rel="home"&gt;Holberton&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;Yet another bug by a Holberton student&lt;/p&gt;
+root@e514b399d69d:~#
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+    <!-- Task Files -->
+
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>alx-system_engineering-devops</code></li>
+            <li>Directory: <code>0x17-web_stack_debugging_3</code></li>
+            <li>File: <code>0-strace_is_your_friend.pp</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+    <button class="student_task_done btn btn-default btn-sm yes" data-task-id="1616">
+      <span class="no"><i aria-hidden="true" class="fa-regular fa-square "></i></span>
+      <span class="yes"><i aria-hidden="true" class="fa-regular fa-square-check "></i></span>
+      <span class="pending"><i aria-hidden="true" class="fa-solid fa-spinner  fa-spin-pulse"></i></span>
+      Done<span class="no pending">?</span><span class="yes">!</span>
+    </button>
+
+      <button class="btn btn-default btn-sm check-your-task-1616-modal-button" data-task-id="1616" data-toggle="modal" data-target="#task-test-correction-1616-correction-modal" id="task-num-0-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1616}">
+          Check your code
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-1616-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "0. Strace is your friend"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="1616">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="1616">
+        <i aria-hidden="true" class="fa-solid fa-circle-info "></i>
+    </button>
+    <div class="help-container" data-task-id="1616">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa-solid fa-circle-check "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa-solid fa-circle-xmark "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#container-specs-modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1616}"><i aria-hidden="true" class="fa-solid fa-terminal "></i><span>Get a sandbox</span></button>
+
+      <button class="btn btn-default btn-sm" data-task-id="1616" data-toggle="modal" data-target="#task-qa-review-1616-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:1616}">
+        QA Review
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-1616-modal" data-correction-id="23533822" data-task-id="1616">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">0. Strace is your friend</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+
+
+
+
+          <div class="modal fade" id="container-specs-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Recommended Sandbox</h4></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;Sandbox&quot;,&quot;containerSpecs&quot;:[{&quot;available&quot;:true,&quot;description&quot;:&quot;\u003cp\u003eWeb stack debugging #3\u003c/p\u003e\n&quot;,&quot;id&quot;:8,&quot;name&quot;:&quot;Ubuntu 14.04 - 293&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:2,&quot;csrfToken&quot;:&quot;gQXuaFgRZp9ptGBbUkzj_kyz58AAIFaAK2SaKfDIo_f0Y6ww9piS9I-zeXNPYu2Ab0WmOd1ZDE7XT-aNVxZLrQ&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"><div><div class="d-flex gap-4 sandboxes-filters"><a class="btn btn-outline-primary"><i aria-hidden="true" class="fa-solid fa-filter"></i><span class="ml-2">Running only</span></a><div class="align-items-center d-flex" style="position: relative; width: 100%;"><input class="form-control" placeholder="Search for an image ..." type="search" value=""></div></div><div class="mt-3"><h3>1 image<small class="ml-2">(0/2 Sandboxes spawned)</small></h3></div><div class="mt-3"><div class="panel panel-default"><div class="panel-body"><div class="align-items-center d-flex flex-wrap justify-content-between"><div><h3 class="mt-0"><i aria-hidden="true" class="fa-solid fa-terminal text-danger"></i><span class="ml-2">Ubuntu 14.04 - 293</span></h3><div class="mt-2 text-muted"><p>Web stack debugging #3</p>
+</div></div><div class="d-flex flex-wrap gap-5"><a class="btn btn-success"><i aria-hidden="true" class="fa-solid fa-play"></i><span class="ml-2">Run</span></a></div></div></div></div></div></div></div></div></div></div></div>
+
+  </div>
+</div>
+
+
+      
+    </div>
+  </div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2024 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary atop-help" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa-solid fa-magnifying-glass "></i>
+  <i aria-hidden="true" class="fa-solid fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" autocomplete="off" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+[I</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div><script type="text/javascript" id="">window.userpilotSettings={token:"NX-b636a33d"};</script>
+<script type="text/javascript" id="" src="https://js.userpilot.io/sdk/latest.js"></script><link rel="stylesheet" href="https://alx-tools.github.io/savanna-content-styles/assets/css/styles.css">
+
+
+        <script id="cody-snippet">
+          window.codySettings = { widget_id: "9993bc72-2258-452b-a4bf-b2fe1ad5e0d7" };
+          !function(){var t=window,e=document,a=function(){var t=e.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://trinketsofcody.com/cody-widget.js";var a=e.getElementsByTagName("script")[0];a.parentNode.insertBefore(t,a)};"complete"===document.readyState?a():t.attachEvent?t.attachEvent("onload",a):t.addEventListener("load",a,!1)}();
+[O        </script>
+  
+
+<iframe id="_hjSafeContext_39871401" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
+<script type="text/javascript" id="">for(var dl=window.dataLayer||[],user=void 0,i=0;i<dl.length;i++)if(dl[i].userId){user=dl[i];break}user&&user.batch&&user.curriculum&&(userpilot.identify("savanna-"+user.userId.toString(),{cohortId:user.batch.id,cohortName:user.batch.fullNameWithC,locationId:user.batch.schoolLocation.id,locationName:user.batch.schoolLocation.name,curriculumId:user.curriculum.id,curriculumName:user.curriculum.name}),userpilot.reload());</script>
+[I<div id="userpilotContent" key="" theme_id="0"></div><div id="cody-wrapper"><style>
+  #cody-wrapper .cody-launcher {
+    position: var(--position) !important;
+    left: var(--left) !important;
+    right: var(--right) !important;
+    bottom: var(--launcher-bottom) !important;
+    border-radius: 9999px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    z-index: 999999 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: box-shadow, scale 300ms linear !important;
+    animation: cody-launcher-pulse 4s infinite !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    cursor: pointer !important;
+    --icon-margin: 12px;
+    --close-icon-margin: 16px;
+  }
+
+    #cody-wrapper {
+    --position: fixed;
+    --left: unset;
+    --right: 20px;
+    --launcher-bottom: 20px;
+    --frame-bottom: 90px;
+    --background-color: #FBD647;
+    --text-color: #020617;
+    --shadow-color: 251, 214, 71;
+  }
+
+  @media screen and (max-width: 512px) {
+    #cody-wrapper {
+[O      --left: unset;
+      --right: 10px;
+    }
+  }
+
+  
+  #cody-wrapper .cody-launcher:hover {
+    scale: 1.1 !important;
+  }
+
+  #cody-wrapper .cody-launcher .cody-close-icon {
+    display: none !important;
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-launcher .cody-icon {
+    display: none !important;;
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-launcher .cody-close-icon {
+    display: block !important;;
+  }
+
+  #cody-wrapper .cody-iframe {
+    z-index: 99999 !important;
+    transition: visibility .5s, opacity .5s linear !important;
+    background-color: #fff !important;
+    position: fixed !important;
+    left: var(--left) !important;
+    right: var(--right) !important;
+    bottom: var(--frame-bottom) !important;
+    height: 75vh !important;
+    width: 448px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 4px rgba(0, 18, 26, .08), 0 3px 12px rgba(0, 18, 26, .16), 0 2px 14px 0 rgba(0, 18, 26, .2) !important;
+    border: 0 !important;
+    display: none !important;
+  }
+
+  @media screen and (max-height: 667px) {
+    #cody-wrapper .cody-iframe {
+      height: calc(100vh - 110px) !important;
+    }
+  }
+
+  @media screen and (max-width: 448px) {
+    #cody-wrapper .cody-iframe {
+      width: calc(100vw - 20px) !important;
+    }
+  }
+
+  #cody-wrapper[data-launcher-open] .cody-iframe {
+    display: block !important;
+  }
+
+  @keyframes cody-launcher-pulse {
+    0%, 100% {
+      box-shadow: 0 0 18px 4px rgba(var(--shadow-color), 0.8);
+    }
+    50% {
+      box-shadow: 0 0 12px 3px rgba(var(--shadow-color), 0.4);
+    }
+  }
+</style>
+
+<button class="cody-launcher" style="width: 56px; height: 56px; font-size: 16px;">
+    <svg class="cody-icon" style="aspect-ratio: 1 / 1; width: 100%; height: 100%; margin: var(--icon-margin)" aria-hidden="true" viewBox="5 7 45 45" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+    <path d="M41.18 17.86a52.75 52.75 0 0 0-19 0c-.54.1-7.9 2.7-7.9 2.7h.01c-2.9 1.01-4.91 3.75-4.91 6.9v4.85c0 2.96 1.78 5.56 4.4 6.7l17.91 8.93v-6.67c3.18 0 6.36-.29 9.5-.86 4.13-.76 7.13-4.36 7.13-8.56v-5.44c-.01-4.19-3.01-7.79-7.14-8.55zm3.47 14c0 2.43-1.74 4.52-4.13 4.95-2.91.53-5.88.8-8.84.8s-5.93-.27-8.84-.8c-2.39-.44-4.13-2.52-4.13-4.95v-5.44c0-2.43 1.74-4.52 4.13-4.95 2.91-.53 5.88-.8 8.84-.8s5.93.27 8.84.8c2.39.44 4.13 2.52 4.13 4.95v5.44z" fill="currentColor"></path>
+    <path d="M26.17 32.79c-.84 0-1.53-.68-1.53-1.53v-4.24c0-.84.68-1.53 1.53-1.53s1.53.68 1.53 1.53v4.24c-.01.85-.69 1.53-1.53 1.53zM37.17 32.79c-.84 0-1.53-.68-1.53-1.53v-4.24c0-.84.68-1.53 1.53-1.53s1.53.68 1.53 1.53v4.24c0 .85-.68 1.53-1.53 1.53z" fill="currentColor"></path>
+</svg>    <svg style="aspect-ratio: 1/1; width: 100%; height: 100%; margin: var(--close-icon-margin);" class="cody-close-icon" launchercloseicon="chevron-down" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <path d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" fill="currentColor"></path>
+</svg></button></div></body></html>
